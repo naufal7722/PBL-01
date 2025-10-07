@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styletes.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+   
+</head>
+<body>
+  <aside>
+    <div>
+      <div class="logo">
+        <div class="logo-circle"></div>
+      </div>
+      <ul>
+        <li><img src="logo1.png" alt="">Data Warga</li>
+        <li><img src="logo2.png" alt="">Dokumen Administrasi</li>
+        <li><img src="logo3.png" alt="">Validasi</li>
+        <li><img src="logo4.png" alt="">Riwayat Administrasi</li>
+      </ul>
+    </div>
+    <div class="footer">
+      <p>SIWa 4.0</p> <br><br>
+      <p>Copyright 2025,<br>All right reserved</p>
+    </div>
+  </aside>
+  <main>
+    <header>
+      <div class="header-left">
+        <img src="logo.png" alt="Logo">
+        <h1>Perumahan Legenda</h1>
+      </div>
+
+      <!-- PROFILE -->
+      <div class="profile-container">
+        <div class="profile-logo" onclick="toggleProfile()"></div>
+        <div class="profile-popup" id="profilePopup">
+          <div class="profile-header">
+            <div class="photo"></div>
+            <div class="info">
+              <strong>User 1</strong>
+              <small>NIK: XXXXXXXXXXXXX</small>
+            </div>
+          </div>
+          <div class="profile-body">
+            <p>Nama: User1</p>
+            <p>NIK:xxxxxxxxxx</p>
+            <p>No KK:xxxxxxxx</p>
+            <p>Alamat:xxxxxxx</p>
+            <p>No telp:083168552659</p>
+            <p>Email:User1@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 🔹 CHANGED: Gabungkan Judul dan Search dalam satu baris -->
+    <div class="title-search">
+      <h2>Data Warga</h2>
+      <form>
+        <div class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input
+            type="search"
+            class="search-input"
+            id="searchInput"
+            placeholder="Cari Nama/NIK/RT/RW"
+            onkeyup="searchTable()">
+        </div>
+      </form>
+    </div>
+<div class="outer-wrapper">
+    <table id="dataWarga">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>NIK</th>
+        <th>No KK</th>
+        <th>Nama</th>
+        <th>Gender</th>
+        <th>Agama</th>
+        <th>Umur</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>3171010100010000</td>
+        <td>3171010100010010</td>
+        <td>BuSantosodi</td>
+        <td>Laki Laki</td>
+        <td>Islam</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>3171010100010001</td>
+        <td>3171010100010011</td>
+        <td>AminahSitii</td>
+        <td>Perempuan</td>
+        <td>Islam</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3171010100010002</td>
+        <td>3171010100010012</td>
+        <td>Andi Santoso</td>
+        <td>Laki Laki</td>
+        <td>Islam</td>
+        <td>37</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>317101010001003</td>
+        <td>3171010100010013</td>
+        <td>Ayu Santoso</td>
+        <td>Perempuan</td>
+        <td>Islam</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>3171010100010004</td>
+        <td>3171010100010014</td>
+        <td>Joko Prasetyo</td>
+        <td>Laki Laki</td>
+        <td>Katolik</td>
+        <td>33</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>3171010100010005</td>
+        <td>3171010100010015</td>
+        <td>Rina Prasetyoi</td>
+        <td>Perempuan</td>
+        <td>Islam</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>3171010100010006</td>
+        <td>3171010100010016</td>
+        <td>Dian Prasetyo</td>
+        <td>Laki Laki</td>
+        <td>Katolik</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>3171010100010007</td>
+        <td>3171010100010017</td>
+        <td>Rizky Prasetyo</td>
+        <td>Laki Laki</td>
+        <td>Islam</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>3171010100010008</td>
+        <td>3171010100010018</td>
+        <td>Ahmad Yusuf</td>
+        <td>Katolik</td>
+        <td>Islam</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>3171010100010009</td>
+        <td>3171010100010019</td>
+        <td>Fitri Handayani</td>
+        <td>Perempuan</td>
+        <td>Islam</td>
+        <td>47</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  </main>
+
+  <script>
+    function toggleProfile() {
+      const popup = document.getElementById('profilePopup');
+      popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+    }
+
+    window.onclick = function(e) {
+      const popup = document.getElementById('profilePopup');
+      if (!e.target.closest('.profile-container')) {
+        popup.style.display = 'none';
+      }
+    }
+
+    function searchTable() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById("dataWarga");
+      const tr = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < tr.length; i++) {
+        const tds = tr[i].getElementsByTagName("td");
+        let found = false;
+        for (let j = 0; j < tds.length; j++) {
+          if (tds[j]) {
+            const textValue = tds[j].textContent || tds[j].innerText;
+            if (textValue.toLowerCase().includes(filter)) {
+              found = true;
+              break;
+            }
+          }
+        }
+        tr[i].style.display = found ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>
