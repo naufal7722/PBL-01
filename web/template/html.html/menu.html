@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Makanan - Restoran XYZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+    color: white;
+    
+    top: 0;
+    background-color: #000; /* Ubah warna latar belakang header menjadi hitam */
+    background-image:url(data:image/jpeg;base64,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);
+    letter-spacing: 2px;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-size: 1000px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+
+
+
+
+}
+header ::backdrop{
+filter: blur(20px);
+
+}
+
+header h1 {
+    color: white;
+    font-family: 'Times New Roman', monospace;
+    text-transform: capitalize;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff4500; /* Warna hover yang berbeda */
+}
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #ff6600;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .menu-item span {
+            flex: 1;
+        }
+
+        .menu-item img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        button{
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+
+        }
+        .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  
+}
+.modal label{
+    
+            margin-bottom: 5px;
+}
+.modal input[type="text"],
+        .modal select,
+        .modal input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .modal button[type="button"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo">Banu Resto </div>
+        <ul>
+            <li><a href="loginrestaurant.html">Login</a></li>
+            <li><a href="homepageresto.html">Beranda</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservasi.html">Reservasi</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="container">
+        <h2>Menu Makanan</h2>
+        <div class="menu-item">
+            <img src="https://asset.kompas.com/crops/l-VRpqwyURdDeKohXrjsR49X1V0=/0x0:1000x667/750x500/data/photo/2023/05/06/645677f368fc1.jpg" alt="Nasi Goreng">
+            <span>Nasi Goreng</span>
+            <span>Rp 25.000</span>
+            <button class="modal-button" href="#myModal1">Beli</button>
+            <div id="myModal1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                <form>
+                    <h1>Nasi Goreng</h1>
+                  Jumlah:<input type="number" size="11" name="bil1" id="bil1" oninput="buy()"><br>
+                  Total: <input type="text" id="hasil" name="bil1"><br>
+                  Alamat:<input type="text"><br>
+
+
+                  
+            <label for="guests">Metode Pembayaran:</label>
+            <select id="guests" name="guests">
+                <option value="1">Kredit</option>
+                <option value="2">Dana Elektronik</option>
+                <option value="3">COD(Cash on Delivery)</option>
+            
+            </select><br>
+                    <input type="button"value="Beli" id="beli-btn" onclick="beli()">
+                </form>
+                </div>
+              
+              </div>
+              
+        </div>
+        <div class="menu-item">
+            <img src="https://images.tokopedia.net/img/KRMmCm/2022/8/15/a4b7d013-9438-46b2-906b-4c374ec82236.jpg" alt="Mie Ayam">
+            <span>Mie Ayam</span>
+            <span>Rp 20.000</span>
+            <button class="modal-button" href="#myModal2">Beli</button>
+            <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                <form>
+                    <h1>Mie Ayam</h1>
+                  Jumlah:<input type="number" size="11" name="bil2" id="bil2" oninput="buy()"><br>
+                  Total: <input type="text" id="hasiL" name="hasiL"><br>
+                  Alamat:<input type="text"><br>
+                  <label for="guests">Metode Pembayaran:</label>
+                  <select id="guests" name="guests">
+                      <option value="1">Kredit</option>
+                      <option value="2">Dana Elektronik</option>
+                      <option value="3">COD(Cash on Delivery)</option>
+                  
+                  </select><br>
+
+                    <input type="button"value="Beli" id="beli-btn" onclick="beli()">
+                </form>
+                </div>
+             
+              </div>
+            
+        </div>
+        <div class="menu-item">
+            <img src="https://media.istockphoto.com/id/521403691/id/foto/pizza-pepperoni-buatan-sendiri-panas.jpg?s=612x612&w=0&k=20&c=b9NJ79ZazxTlj8vwiI7eiVztsN-2dystpwsNl2e-zig=" alt="Pizza Pepperoni">
+            <span>Pizza Pepperoni</span>
+            <span>Rp 35.000</span>
+            <button class="modal-button" href="#myModal3">Beli</button>
+            <div id="myModal3" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                <form>
+                    <h1>Pizza Pepperoni</h1>
+                  Jumlah:<input type="number" size="11" name="bil3"  id="bil3" oninput="buy()"><br>
+                  Total: <input type="text" id="Hasil" name="Hasil"><br>
+                  Alamat:<input type="text"><br>
+                  <label for="guests">Metode Pembayaran:</label>
+                  <select id="guests" name="guests">
+                      <option value="1">Kredit</option>
+                      <option value="2">Dana Elektronik</option>
+                      <option value="3">COD(Cash on Delivery)</option>
+                  
+                  </select><br>
+                    <input type="button"value="Beli" id="beli-btn" onclick="beli()">
+                </form>
+                </div>
+              
+              </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://cdn.idntimes.com/content-images/community/2022/07/inspirasi-olahan-daging-kambing-khas-indonesia-paling-enak-olahan-daging-kurban-menu-masakan-dari-daging-qurban-gulai-kambing-resep-gulai-kambing-9cde86371d7fc78c91ae80a6ffab250e-dba889cb8ea963629c3ec5b2ddd3a01f_600x400.jpg" alt="Gulai Kambing">
+            <span>Gulai Kambing</span>
+            <span>Rp 30.000</span>
+            <button class="modal-button" href="#myModal4">Beli</button>
+            <div id="myModal4" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                <form>
+                    <h1>Gulai kambing</h1>
+                  Jumlah:<input type="number" size="11" name="bil4" id="bil4" oninput="buy()"><br>
+                  Total: <input type="text" id="HASIL" name="HASIL"><br>
+                  Alamat:<input type="text"><br>
+                  <label for="guests">Metode Pembayaran:</label>
+                  <select id="guests" name="guests">
+                      <option value="1">Kredit</option>
+                      <option value="2">Dana Elektronik</option>
+                      <option value="3">COD(Cash on Delivery)</option>
+                  
+                  </select><br>
+                    <input type="button"value="Beli" id="beli-btn" onclick="beli()">
+                </form>
+                </div>
+              
+              </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://blog.tokowahab.com/wp-content/uploads/2018/10/resep-es-krim-vanilla-homemade.jpg" alt="Es Krim Vanilla">
+            <span>Es Krim Vanilla</span>
+            <span>Rp 15.000</span>
+            <button class="modal-button" href="#myModal5">Beli</button>
+            <div id="myModal5" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                <form>
+                    <h1>Es krim vanila</h1>
+                  Jumlah:<input type="number" size="11" name="bil5" id="bil5" oninput="buy()"><br>
+                  Total: <input type="text" id="HasiL" name="HasiL" value=""readonly="readonly"><br>
+                  Alamat:<input type="text"><br>
+                  <label for="guests">Metode Pembayaran:</label>
+                  <select id="guests" name="guests">
+                      <option value="1">Kredit</option>
+                      <option value="2">Dana Elektronik</option>
+                      <option value="3">COD(Cash on Delivery)</option>
+                  
+                  </select><br>
+                    <input type="button"value="Beli" id="beli-btn" onclick="beli()">
+                </form>
+                </div>
+              
+              </div>
+        </div>
+    <script>
+// Membuat variabel modal
+var modal = document.getElementById('myModal');
+var btn = document.querySelectorAll("button.modal-button");
+var modals = document.querySelectorAll('.modal');
+
+// membuat span element untuk modal
+var spans = document.getElementsByClassName("close");
+
+// membuat modal dibuka jika button di klik
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// membuat jika user mengklik <X> modal ditutup
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+//membuat variabel untuk junmlah produk
+function buy(){
+var bil1=document.getElementById("bil1").value;
+var bil2=document.getElementById("bil2").value;
+var bil3=document.getElementById("bil3").value;
+var bil4=document.getElementById("bil4").value;
+var bil5=document.getElementById("bil5").value;
+//membuat operator untuk total harga
+var hasil=parseInt(bil1)*25000;
+var hasiL=parseInt(bil2)*20000;
+var Hasil=parseInt(bil3)*35000;
+var HASIL=parseInt(bil4)*30000;
+var HasiL=parseInt(bil5)*15000;
+//membuat input untuk total harga
+document.getElementById("hasil").value=hasil;
+document.getElementById("hasiL").value=hasiL;
+document.getElementById("Hasil").value=Hasil;
+document.getElementById("HASIL").value=HASIL;
+document.getElementById("HasiL").value=HasiL;
+
+
+
+}
+//membuat function tombol beli
+function beli(){
+alert("pembelian sukses")
+
+document.getElementById("beli-btn").addEventListener("click", function () {
+        window.location.href = "menu.html";
+    });
+}
+        </script>
+    </div>
+    <footer>
+        &copy; Banu resto. Hak Cipta Dilindungi.
+    </footer>
+</body>
+</html>
