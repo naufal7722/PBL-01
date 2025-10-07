@@ -65,8 +65,7 @@
             type="search"
             class="search-input"
             id="searchInput"
-            placeholder="Cari Nama/NIK/RT/RW"
-            onkeyup="searchTable()">
+            placeholder="Cari Nama/NIK/RT/RW">
         </div>
       </form>
     </div>
@@ -248,29 +247,10 @@
       }
     }
 
-    function searchTable() {
-      const input = document.getElementById("searchInput");
-      const filter = input.value.toLowerCase();
-      const table = document.getElementById("dataWarga");
-      const tr = table.getElementsByTagName("tr");
-
-      for (let i = 1; i < tr.length; i++) {
-        const tds = tr[i].getElementsByTagName("td");
-        let found = false;
-        for (let j = 0; j < tds.length; j++) {
-          if (tds[j]) {
-            const textValue = tds[j].textContent || tds[j].innerText;
-            if (textValue.toLowerCase().includes(filter)) {
-              found = true;
-              break;
-            }
-          }
-        }
-        tr[i].style.display = found ? "" : "none";
-      }
-    }
+  
   </script>
 </body>
 
 </html>
+
 
