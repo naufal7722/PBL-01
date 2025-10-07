@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style>
+ 
+
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 10;
+        background-color: #f5f5f5;
+        color: #333;
+        box-sizing: border-box;
+        background: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)), url(5172658.jpg);
+    background-attachment: fixed;
+
+      }
+
+      
+
+      .main-content {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-section {
+        text-align: center;
+      }
+
+      .developer-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .developer-card {
+        text-align: center;
+      }
+
+      .developer-card img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .developer-card h3 {
+        margin: 10px 0;
+        color: #4caf50;
+      }
+      .developer-card a{
+        font-size: 1.17em ;
+        font-weight: bolder;
+        margin: 13px 0;
+        color: #4caf50;
+
+      }
+
+      .developer-card p {
+        color: #777;
+      }
+
+      .developer-card .social-icons {
+        margin-top: 10px;
+      }
+
+      .developer-card .social-icons a {
+        margin: 0 5px;
+        color: #333;
+        font-size: 18px;
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #fff;
+        font-size: 24px;
+      }
+
+      
+      .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+  
+}
+p3{
+    
+      margin: 10px 0;
+      text-align: center;
+  
+}
+
+
+
+.navbar a {
+   text-decoration: none;
+   color: white;
+   margin: 0 15px;
+   padding: 8px 12px;
+   border-radius: 4px;
+   transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+   background-color: #555;
+}
+
+header{
+   background-color:rgb(13, 13, 161);
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   
+}
+
+
+
+.logo img{
+ height: 65px;
+ width: auto;
+}
+
+.navbar .menu {
+   display: flex;
+   align-items: center;
+}
+.judul{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+header .judul {
+   text-align: center;
+   color: white;
+   font-weight: bold;
+   left: 50%;
+   /* Pengaturan khusus jika diperlukan */
+
+}
+.site-footer {
+   text-align: center;
+   background-color:rgb(13, 13, 161);
+   color: white;
+   padding: 10px 10px;
+   font-size: 0.8em;
+}
+
+.subnav .subnavbtn {
+ font-size: 16px;  
+ border: none;
+ outline: none;
+ padding: 14px 16px;
+ font-family: inherit;
+ margin: 0;
+ overflow: hidden;
+ background-color:rgb(134, 134, 134);
+ color: white;
+
+}
+.subnavbtn{
+ overflow: hidden;
+ background-color:rgb(134, 134, 134);
+ color: white;
+}
+.subnavbtn a{
+ float: left;
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+.subnav-content {
+ display: none;
+ position: absolute;
+ left: 1000;
+ margin-right: 160px;
+ top: 50px;
+ background-color: rgb(4, 4, 107);
+ width: 100%;
+ z-index: 1;
+ direction: rtl;
+}
+
+.subnav-content a {
+ float: left;
+ color: white;
+ text-decoration: none;
+ 
+}
+
+.subnav-content a:hover {
+ background-color: rgb(237, 237, 237);
+ color: black;
+}
+
+.subnav:hover .subnav-content {
+ display: block;
+}
+h1{
+ text-align: left;
+ font-size: small;
+}
+h2{
+   font-size:xx-large;
+}
+.genre{
+ background-color: rgb(19, 19, 216);
+ padding-top: 0.1px;
+
+}
+.topnav {
+ overflow: hidden;
+ background-color:rgb(7, 7, 104);
+ color: white;
+}
+
+.topnav a {
+ float: left;
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+.active {
+ background-color: #04AA6D;
+ color: white;
+}
+
+.topnav .icon {
+ display: none;
+}
+
+.dropdown {
+ float: left;
+ overflow: hidden;
+ direction:rtl;
+
+}
+
+.dropdown .dropbtn {
+ font-size: 17px;    
+ border: none;
+ outline: none;
+ color: white;
+ padding: 14px 16px;
+ background-color: inherit;
+ font-family: inherit;
+ margin: 0;
+}
+
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color:rgb(10, 10, 160);
+ color: white;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+.dropdown-content a {
+ float: none;
+ color: white;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left;
+ background-color:rgb(4, 4, 107);
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+ background-color: rgb(51, 51, 231);
+ color: white;
+}
+
+.dropdown-content a:hover {
+ background-color:rgb(51, 51, 239);
+ color: black;
+}
+
+.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+@media screen and (max-width: 600px) {
+ .topnav a:not(:first-child), .dropdown .dropbtn {
+   display: none;
+ }
+ .topnav a.icon {
+   float: right;
+   display: block;
+ }
+}
+
+@media screen and (max-width: 600px) {
+ .topnav.responsive {position: relative;}
+ .topnav.responsive .icon {
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ .topnav.responsive a {
+   float: none;
+   display: block;
+   text-align: left;
+ }
+ .topnav.responsive .dropdown {float: none;}
+ .topnav.responsive .dropdown-content {position: relative;}
+ .topnav.responsive .dropdown .dropbtn {
+   display: block;
+   width: 100%;
+   text-align: left;
+ }
+}
+    </style>
+    <title>Heroes Book Team</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+          <div class="logo">
+              <img src="logos.png" alt="Your Logo">
+          </div>
+          <div class="judul">
+              <p>HEROES BOOK</p>
+          </div>
+         
+            <div class="dropdown">
+              <button class="dropbtn" onclick="home()">Home 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+            
+            <div class="topnav">     
+              <a style="color: white;" href="index.html">Home</a>
+                  <a style="color: white;" href="login.html">Login</a>
+                  <a style="color: white;" href="kontak.html">Contacts</a>
+                  <a style="color: white;" href="profil.html">About us</a>
+                  <div class="subnav">
+                  <a style="color: white;" href="toko.html">Books</a>
+                  <div class="subnav-content">
+                    <div class="genre">
+                    <h1>Genre</h1>
+                  </div>
+                    <a href="genre fantasy.html">Fantasy</a>
+                    <a href="genre mistery.html">Mystery</a>
+                    <a href="genre romance.html">Romance</a>
+                    <a href="genre nonfiksi.html">Nonfiksi</a>
+                    <a href="genre horror.html">Horror</a>
+    
+                    
+                  </div>
+          
+                  
+                </div>
+                </div> 
+              </div>
+          </div>
+        
+          
+         
+          
+      </div>
+  </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#developers">Developers</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Heroes Book Team, where we bring creativity to life! Learn
+          more about our mission and vision...
+        </p>
+      </section>
+
+      <section id="developers" class="developer-section">
+        <div class="developer-card">
+          <img src="foto2.jpg" alt="Developer 1" />
+          <div>
+          <a>Denif Anandika</a>
+        </div>
+          <p>Web Developer</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/denif_kuy/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="developer-card">
+          <img src="jhoni.jpg" alt="Developer 2" />
+          <div>
+          <a>M.Nurul Yaqin</a>
+        </div>
+          <p>Front-end Developer</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/muhammad_nur_yqin_16/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="developer-card">
+          <img src="foto5.jpg" alt="Developer 3" />
+          <div>
+          <a href="profilnaufal.html">Naufal Rafi</a>
+        </div>
+          <p>Back-end Developer</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/naufrafi_/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="developer-card">
+          <img src="foto4.jpg" alt="Developer 4" />
+          <div>
+          <a>Rahmat</a>
+        </div>
+          <p>PPT Designer</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cheeryum_/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="developer-card">
+          <img src="foto1.jpg" alt="Developer 5" />
+          <div>
+          <a>Banu Tresna</a>
+        </div>
+          <p>Web Developer</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/banu_1101/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2023 Heroes Book Team. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
