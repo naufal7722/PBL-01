@@ -182,9 +182,7 @@
     .search-icon {
       color: rgba(0, 0, 0, 0.25);
     }
-    table {
-      overflow-x: scroll;
-    }
+   
     table, th, td {
       border: 1px solid black;
       border-collapse: collapse;
@@ -193,7 +191,7 @@
     }
     th, td {
       padding: 15px 20px;
-      padding-bottom: 0%;
+      padding-bottom: 5px;
       margin: 50px;
       white-space:nowrap;
     }
@@ -204,7 +202,7 @@
       margin-bottom: 15px;
     } 
     .button-tambah {
-      margin-left:560px;
+      margin-left:500px;
       padding-bottom: 10px;
       padding-top: 10px;
       font-weight: bold;
@@ -214,8 +212,14 @@
       border-radius: 12px;
       white-space:nowrap;
       width: 150px;
+      justify-content: center;
+      display:flex;
+      align-items: center;
       
       
+    }
+    .button-tambah img{
+      width: 20px;
     }
     .button-tambah:hover {
       background-color: #c6a63a;
@@ -231,9 +235,19 @@
       border-radius: 12px;
       white-space:nowrap;
       width: 150px;
+      justify-content: center;
+      display:flex;
+      align-items: center;
       
       
     }
     .button-cetak:hover {
       background-color: #c6a63a;
     }
+    .button-cetak img{
+      width: 20px;
+    }
+    .logo-aksi {
+      width: 20px;
+    }
+    
