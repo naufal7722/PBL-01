@@ -16,6 +16,7 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 40px 20px;
+      min-width: 270px;
     }
     .logo {
       display: flex;
@@ -74,11 +75,11 @@
       gap: 15px;
     }
 
+
     .header-left img {
       width: 50px;
     }
 
-    /* === PROFILE === */
     .profile-container {
       position: relative;
     }
@@ -202,7 +203,7 @@
       margin-bottom: 15px;
     } 
     .button-tambah {
-      margin-left:500px;
+      margin-left:50px;
       padding-bottom: 10px;
       padding-top: 10px;
       font-weight: bold;
@@ -245,9 +246,45 @@
       background-color: #c6a63a;
     }
     .button-cetak img{
-      width: 20px;
+      width: 18.4px;
     }
     .logo-aksi {
       width: 20px;
     }
-    
+    .table-container {
+   
+  max-width: 871px;
+  overflow-x: auto;  
+  border: 1px solid #ccc; 
+}
+
+.table-container thead th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+}
+
+.gap{
+  gap: 450px;
+  display: flex;
+}
+.gap h1{
+  white-space: nowrap;
+}
+.btn{
+    background-color: #ffB915;
+    color:#001b2f;
+    border-radius: 12px;
+    width: 40%;
+    height: 25px;
+    margin-top: 120px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+}
