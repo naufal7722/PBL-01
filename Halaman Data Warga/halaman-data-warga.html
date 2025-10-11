@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="id">
 <head>
@@ -120,7 +121,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 1</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>2</td>
@@ -136,8 +137,9 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 2</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
+      </div>
       <tr>
         <td>3</td>
         <td>3171010100010002</td>
@@ -152,7 +154,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 2</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>4</td>
@@ -168,7 +170,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 4</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>5</td>
@@ -184,7 +186,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 5</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>6</td>
@@ -200,7 +202,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 6</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>7</td>
@@ -216,7 +218,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 7</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>8</td>
@@ -232,7 +234,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 8</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>9</td>
@@ -248,7 +250,7 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 9</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+       <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       <tr>
         <td>10</td>
@@ -264,12 +266,24 @@
         <td>RW 01</td>
         <td>Perumahan legenda blok A no 10</td>
         <td><img src="logo-update.jpeg" class="logo-aksi">Update</td>
-        <td><img src="logo-delete.jpeg" class="logo-aksi">Delete</td>
+        <td><div onclick="toogle()" class="button-delete"><img src="logo-delete.jpeg" class="logo-aksi"> Delete</div> </td>
       </tr>
       
     </tbody>
   </table>
   </div>
+ <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Apakah anda yakin ingin menghapus data ini?</p>
+    <div><button class="button-popup-ya">YA</button><button class="button-popup-tidak">TIDAK</button></div>
+  </div>
+
+</div>
+
+</div>
   </main>
 
   <script>
@@ -284,8 +298,31 @@
         popup.style.display = 'none';
       }
     }
+function toogle(){
+var modal = document.getElementById("myModal");
 
-    
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+  modal.style.display = "block";
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+}
   </script>
 </body>
 
