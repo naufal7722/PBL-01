@@ -1,0 +1,131 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body{
+      display:flex;
+      min-height: 100vh;
+    }
+    aside {
+      width: 270px;
+      background: linear-gradient(#001b2f,#002a45,#003f66);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 20px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background-image:url(logo.png);
+      background-size: cover ;
+    }
+    ul {
+      list-style: none;
+      margin-top: 90px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 18px 0;
+      cursor: pointer;
+      color: #f5ca43;
+      font-weight: bold;
+      font-size: small;
+    }
+    li img {
+      width: 28px;
+      height: 28px;
+    }
+    .footer {
+      color:yellow;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 120px;
+    }
+    main {
+      flex: 1;
+      padding: 40px 60px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-left img {
+      width: 100px;
+    }
+
+
+    .profile-logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-image: url('profil.jpeg');
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .profile-popup {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 260px;
+      background: #002a45;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      overflow: hidden;
+      display: none;
+      z-index: 10;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+
+
+ .semuaumur select {
+    border: 0;
+    border-radius: 10px;
+    background-color: rgb(219, 213, 213);
+    width: 280px;
+    height: 40px;
+    margin-top: 70px;
+    padding-left:15px ;
+    font-size: 25px;
+ }
+
+ .semuaumur {
+    display: flex;
+    gap: 60px;
+    margin-left: 0px
+ }
+
+
+
+
+
+
+
+
+
