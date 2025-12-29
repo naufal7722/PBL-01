@@ -1,0 +1,74 @@
+{% extends "layout/layout.html" %} {% block title %}Tambah Transaksi{% endblock
+%} {% block navbar %}Tambah Anggaran{% endblock %} {% block content %}
+    <div class="left">
+      <h1>Tambah Anggaran</h1>
+      <div class="head-title">
+        <div class="left">
+          <ul class="breadcrumb">
+            <li><a href="/">Dashboard</a></li>
+            <li><i class="bx bx-chevron-right"></i></li>
+            <li><a href="{{ url_for('data_transaksi') }}">Anggaran</a></li>
+            <li><i class="bx bx-chevron-right"></i></li>
+            <li><a class="active" href="#">Tambah Anggaran</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+        <div class="table-data">
+          <div class="order">
+            <form action="{{ url_for('insert_anggaran') }}" method="POST">
+              <div class="form-group">
+                <label>Kategori</label>
+                <select name="kategori_id" required>
+                  <option value="">-- Pilih Kategori --</option>
+                  {% for k in kategori %}
+                  <option value="{{ k[0] }}">{{ k[1] }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Bulan</label>
+                <select name="bulan" required>
+                  {% for i in range(1,13) %}
+                  <option value="{{ i }}">{{ i }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Tahun</label>
+                <input
+                  type="number"
+                  name="tahun"
+                  value="{{ now.year }}"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Nominal</label>
+                <input
+                  type="number"
+                  name="nominal"
+                  placeholder="Contoh: 2000000"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn-download">
+                <i class="bx bx-save"></i> Simpan
+              </button>
+
+              <a
+                href="{{ url_for('data_anggaran') }}"
+                class="btn-download"
+                style="background: #aaa"
+              >
+                Kembali
+              </a>
+            </form>
+          </div>
+        </div>
+{% endblock %}

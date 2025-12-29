@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tambah Kategori</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="{{ url_for('index') }}" class="brand">
+        <i class="bx bxs-wallet"></i>
+        <span class="text">KeuanganApp</span>
+      </a>
+
+      <ul class="side-menu top">
+        <li class="{% if active == 'dashboard' %}active{% endif %}">
+          <a href="{{ url_for('index') }}">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="{% if active == 'transaksi' %}active{% endif %}">
+          <a href="{{ url_for('data_transaksi') }}">
+            <i class="bx bxs-credit-card"></i>
+            <span class="text">Transaksi</span>
+          </a>
+        </li>
+
+        <li class="{% if active == 'kategori' %}active{% endif %}">
+          <a href="{{ url_for('data_kategori') }}">
+            <i class="bx bxs-category"></i>
+            <span class="text">Kategori</span>
+          </a>
+        </li>
+
+        <li class="{% if active == 'anggaran' %}active{% endif %}">
+          <a href="{{ url_for('data_anggaran') }}">
+            <i class="bx bxs-wallet-alt"></i>
+            <span class="text">Anggaran</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="side-menu">
+        <li>
+          <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('logout')}}" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link">Dashboard Keuangan</a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="{{ url_for('index')}}">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a href="{{ url_for('data_kategori')}}"
+                  >Kategori</a
+                >
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Edit Kategori</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-data">
+          <div class="order">
+            <form
+              action="{{ url_for('update_kategori', id=kategori[0]) }}"
+              method="POST"
+            >
+              <div class="form-group">
+                <label>Nama Kategori</label>
+                <input
+                  type="text"
+                  name="nama_kategori"
+                  value="{{ kategori[1] }}"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn-download">
+                <i class="bx bx-save"></i> Update
+              </button>
+
+              <a
+                href="{{ url_for('data_kategori') }}"
+                class="btn-download"
+                style="background: #aaa"
+              >
+                Kembali
+              </a>
+            </form>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
